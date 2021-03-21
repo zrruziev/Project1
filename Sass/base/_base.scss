@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; 
+  //1rem=10px --> 10px/16px=62.5%
+  @include respond(big-desktop) {
+      font-size: 75%;
+  }
+
+  @include respond(tab-landscape) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab) {
+      font-size: 45%;
+  }
+  
+  @include respond(phone) {
+      font-size: 40%;
+  }
+}
+
+
+// body {
+//   box-sizing: border-box;
+//   padding: 0rem;
+
+  
+// }
+
+
+

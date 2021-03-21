@@ -1,0 +1,123 @@
+.composition {
+  position: relative;
+  
+  @include respond(tab) {
+    margin: auto;
+    display: flex;
+    // justify-content: space-between;
+  }
+  @include respond(phone) {
+    margin: auto;
+    display: flex;
+    // justify-content: space-between;
+  }
+
+  .photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(#000, .4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    @include respond(tab) {
+      position: relative;
+      width: 33%;
+      display: block;
+      margin: 5rem auto 0 auto;
+    }
+    @include respond(phone) {
+      position: relative;
+      width: 33%;
+      display: block;
+      margin: 5rem auto 0 auto;
+    }
+
+  }
+    .photo-p1 {
+      left: 2rem;
+      top: -2rem;
+      transform: rotate(6deg);
+
+      @include respond(tab) {
+        left: 0;
+        top: 0;
+        transform: rotate(0);
+      }
+      @include respond(phone) {
+        left: 0;
+        top: 0;
+        transform: rotate(0);
+      }
+    }
+  
+    .photo-p2 {
+      right: 0rem;
+      top: 0;
+      transform: rotate(-6deg);
+
+      @include respond(tab) {
+        left: 0;
+        top: 0;
+        transform: rotate(0) scale(1.1);
+        z-index: 11;
+      }
+      @include respond(phone) {
+        left: 0;
+        top: 0;
+        transform: rotate(0) scale(1.1);
+      }
+    }
+  
+    .photo-p3 {
+      left: 20%;
+      top: 10rem;
+      transform: rotate(3deg);
+
+      @include respond(tab) {
+        left: 0;
+        top: 0;
+        transform: rotate(0);
+      }
+      @include respond(phone) {
+        left: 0;
+        top: 0;
+        transform: rotate(0);
+      }
+    }
+
+    .photo:hover {
+      outline-offset: 1rem;
+      outline: .8rem solid $color-primary;
+      transform: scale(1.1) translateY(-1rem); 
+      box-shadow: 0 2.5rem 4rem rgba(#000, .5);
+      z-index: 20;
+
+      @include respond(tab) {
+        outline-offset: 0;
+        outline: .2rem solid $color-primary;
+        transform: scale(1.2) translateY(0);
+      }
+      @include respond(phone) {
+        outline-offset: 0;
+        outline: .2rem solid $color-primary;
+        transform: scale(1.2) translateY(0);
+      }
+    }
+
+}
+
+.composition:hover .photo:not(:hover) {
+  transform: scale(.9);
+  transition: all.2s;
+
+  @include respond(tab) {
+    transform: scale(1);
+    transition: all.2s;
+  }
+  @include respond(phone) {
+    transform: scale(1);
+    transition: all.2s;
+  }
+}
+
+
