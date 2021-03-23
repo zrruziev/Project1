@@ -96,11 +96,16 @@
         outline-offset: 0;
         outline: .2rem solid $color-primary;
         transform: scale(1.2) translateY(0);
+        outline: none;
+        border-radius: 10px;
       }
       @include respond(phone) {
         outline-offset: 0;
         outline: .2rem solid $color-primary;
         transform: scale(1.2) translateY(0);
+        outline: none;
+        border-radius: 10px;
+
       }
     }
 
